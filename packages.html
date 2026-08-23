@@ -1,25 +1,157 @@
-<h1>باقات قصة الكرتون</h1>
- 
-<h2>🎬 فيديو دقيقتين</h2>  
-<p>2000 جنيه</p>
- 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الباقات والأسعار | قصة الكرتون</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+      color: #fff; min-height: 100vh; padding: 20px; display: flex; flex-direction: column; align-items: center;
+    }
+    header {
+      width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 25px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+      border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 40px;
+    }
+    .logo { font-size: 24px; font-weight: bold; color: #a855f7; }
+    nav a { color: #cbd5e1; text-decoration: none; margin-right: 20px; }
+    
+    h1 { margin-bottom: 10px; font-size: 36px; text-align: center; }
+    p.subtitle { color: #94a3b8; margin-bottom: 40px; text-align: center; }
 
-<h2>🎬 فيديو 3 دقائق</h2>
-<p>2700 جنيه</p>
- 
+    .pricing-container {
+      display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; max-width: 1200px;
+    }
+    .price-card {
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px; padding: 25px; width: 320px; text-align: center; transition: 0.3s;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .price-card:hover { transform: translateY(-5px); border-color: #a855f7; }
+    .price-card.featured { border-color: #a855f7; background: rgba(168, 85, 247, 0.12); box-shadow: 0 8px 25px rgba(168, 85, 247, 0.2); }
+    .badge { background: #a855f7; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+    
+    .price { font-size: 30px; font-weight: bold; color: #38bdf8; margin: 15px 0; }
+    .features-list { list-style: none; text-align: right; margin-bottom: 25px; color: #cbd5e1; line-height: 2; font-size: 14px; }
+    .features-list li::before { content: "✓ "; color: #a855f7; font-weight: bold; }
 
-<h2>🎬 فيديو 4 دقائق</h2>
-<p>3600 جنيه</p>
+    .btn-order {
+      display: block; width: 100%; padding: 12px; border-radius: 25px;
+      background: linear-gradient(90deg, #25D366, #128C7E); color: white; text-decoration: none; font-weight: bold; transition: 0.3s;
+    }
+    .btn-order:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
 
- 
+  <header>
+    <div class="logo">قصة الكرتون</div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="packages.html" style="color: #a855f7; font-weight: bold;">الباقات والأسعار</a>
+    </nav>
+  </header>
 
-<h2>🎬 فيديو 6 دقائق</h2>
+  <h1>باقات أفلام الكرتون والأنيميشن</h1>
+  <p class="subtitle">اختر المدة المناسبة لقصتك وابدأ معنا فوراً عبر الواتساب</p>
 
-<p>4500 جنيه</p>
+  <div class="pricing-container">
 
- 
+    <!-- دقيقة -->
+    <div class="price-card">
+      <div>
+        <h3>باقة الدقيقة الواحدة</h3>
+        <div class="price">1,000 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 1 دقيقة</li>
+          <li>تصميم شخصيات حسب الطلب</li>
+          <li>صياغة سيناريو احترافي</li>
+          <li>تسليم بجودة عاليـة HD</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الدقيقة%20الواحدة" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
 
-<p>
-تشمل الباقات تصميم شخصيات كرتونية مخصصة وتحويل قصتكم إلى فيلم أنيميشن يحكي أجمل الذكريات والمواقف <p>
+    <!-- دقيقتين -->
+    <div class="price-card">
+      <div>
+        <h3>باقة الدقيقتين</h3>
+        <div class="price">2,000 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 2 دقيقة</li>
+          <li>تصميم شخصيتين أو أكثر</li>
+          <li>سيناريو مميز للأحداث</li>
+          <li>إضافة مؤثرات صوتية وموسيقى</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الدقيقتين" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
 
-index.htmlالعودة للرئيسية</a>
+    <!-- 3 دقائق -->
+    <div class="price-card featured">
+      <div>
+        <span class="badge">الأكثر طلباً ⭐</span>
+        <h3>باقة الـ 3 دقائق</h3>
+        <div class="price">2,700 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 3 دقائق</li>
+          <li>توفير 300 جنيه</li>
+          <li>سرد قصصي كامل ومتكامل</li>
+          <li>تعديلات مجانية للسيناريو</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ3%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <!-- 4 دقائق -->
+    <div class="price-card">
+      <div>
+        <h3>باقة الـ 4 دقائق</h3>
+        <div class="price">3,600 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 4 دقائق</li>
+          <li>توفير 400 جنيه</li>
+          <li>مشاهد متنوعة وشخصيات متعددة</li>
+          <li>جودة احترافية للعرض في المناسبات</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ4%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <!-- 5 دقائق -->
+    <div class="price-card">
+      <div>
+        <h3>باقة الـ 5 دقائق</h3>
+        <div class="price">4,200 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 5 دقائق</li>
+          <li>توفير 800 جنيه</li>
+          <li>فيلم أنيميشن قصير ومتكامل</li>
+          <li>أولوية وسرعة في التنفيذ</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ5%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <!-- 6 دقائق -->
+    <div class="price-card featured">
+      <div>
+        <span class="badge">أعلى توفير 🔥</span>
+        <h3>باقة الـ 6 دقائق</h3>
+        <div class="price">4,500 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 6 دقائق</li>
+          <li>توفير 1,500 جنيه كاملة!</li>
+          <li>فيلم كامل يصلح لأعياد الزفاف والمناسبات الكبرى</li>
+          <li>دعم وفحص دقيق حتى الرضا التام</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ6%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
