@@ -7,61 +7,61 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
     body {
-      background-color: #f0f4f9;
-      color: #1e293b; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px;
+      background: #0f172a;
+      color: #f8fafc; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px;
     }
     header {
       width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center;
-      padding: 15px 25px; background: #ffffff; border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
+      padding: 15px 25px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px);
+      border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px;
     }
     .logo-text { font-size: 26px; font-weight: 900; color: #ff8c00; letter-spacing: 1px; }
-    .logo-text span { color: #1e40af; }
-    nav a { color: #475569; text-decoration: none; margin-right: 20px; font-weight: bold; transition: 0.3s; }
+    .logo-text span { color: #38bdf8; }
+    nav a { color: #cbd5e1; text-decoration: none; margin-right: 20px; font-weight: bold; transition: 0.3s; }
     nav a:hover { color: #ff8c00; }
 
     .hero { text-align: center; max-width: 800px; margin: 20px auto; }
-    .hero h1 { font-size: 40px; color: #0f172a; margin-bottom: 15px; }
-    .hero p { font-size: 18px; color: #64748b; line-height: 1.8; margin-bottom: 25px; }
+    .hero h1 { font-size: 40px; color: #ffffff; margin-bottom: 15px; }
+    .hero p { font-size: 18px; color: #94a3b8; line-height: 1.8; margin-bottom: 25px; }
     
     .btn-primary {
       display: inline-block; padding: 15px 35px; font-size: 18px; font-weight: bold; color: #ffffff;
       background: linear-gradient(90deg, #ff8c00, #f59e0b); border-radius: 50px; text-decoration: none;
-      box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3); transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(255, 140, 0, 0.35); transition: all 0.3s ease;
     }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(255, 140, 0, 0.4); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255, 140, 0, 0.5); }
 
     section { width: 100%; max-width: 1100px; margin: 40px 0; }
-    .section-title { text-align: center; font-size: 28px; color: #1e40af; margin-bottom: 25px; }
+    .section-title { text-align: center; font-size: 28px; color: #38bdf8; margin-bottom: 25px; }
 
-    /* قسم المطلوب من العميل */
+    /* خطوات العمل */
     .steps-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
     .step-card {
-      background: #ffffff; padding: 20px; border-radius: 16px; width: 240px; text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-top: 4px solid #ff8c00;
+      background: #1e293b; padding: 20px; border-radius: 16px; width: 240px; text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid #ff8c00;
     }
-    .step-card h4 { color: #1e40af; margin-bottom: 10px; font-size: 18px; }
-    .step-card p { color: #64748b; font-size: 14px; line-height: 1.6; }
+    .step-card h4 { color: #ff8c00; margin-bottom: 10px; font-size: 18px; }
+    .step-card p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
 
-    /* قسم معرض الأعمال */
+    /* معرض الأعمال */
     .portfolio-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
     .portfolio-item {
-      background: #ffffff; border-radius: 16px; overflow: hidden; width: 320px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center; padding-bottom: 15px;
+      background: #1e293b; border-radius: 16px; overflow: hidden; width: 320px;
+      border: 1px solid rgba(255, 255, 255, 0.08); text-align: center; padding-bottom: 15px;
     }
     .portfolio-item iframe { width: 100%; height: 200px; border: none; }
-    .portfolio-item h4 { margin: 10px 0 5px; color: #0f172a; }
+    .portfolio-item h4 { margin: 12px 0 5px; color: #f8fafc; }
 
-    /* قسم سياسة الدفع */
+    /* سياسة الدفع */
     .payment-box {
-      background: #e0f2fe; border: 1px solid #bae6fd; padding: 25px; border-radius: 20px;
+      background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); padding: 25px; border-radius: 20px;
       text-align: center; max-width: 800px; margin: 0 auto;
     }
-    .payment-box h3 { color: #0369a1; margin-bottom: 10px; }
-    .payment-box p { color: #0c4a6e; font-size: 15px; line-height: 1.7; }
+    .payment-box h3 { color: #38bdf8; margin-bottom: 10px; }
+    .payment-box p { color: #cbd5e1; font-size: 15px; line-height: 1.8; }
 
     footer { margin-top: auto; padding: 30px 0 10px; text-align: center; }
-    .social-links a { color: #1e40af; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    .social-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -80,7 +80,7 @@
     <a href="packages.html" class="btn-primary">استعرض الباقات والأسعار</a>
   </section>
 
-  <!-- ماذا نحتاج منكم؟ -->
+  <!-- المطلوب منكم -->
   <section>
     <h2 class="section-title">إزاي بنعمل فيديو قصتكم؟ (المطلوب منكم)</h2>
     <div class="steps-container">
@@ -108,7 +108,6 @@
     <h2 class="section-title">معرض أعمالنا</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <!-- يمكن استبدال src برابط فيديو يوتيوب أو ترك المكان كمعاينة -->
         <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="نموذج عمل"></iframe>
         <h4>قصة خطوبة أنيميشن</h4>
       </div>
@@ -119,13 +118,13 @@
     </div>
   </section>
 
-  <!-- نظام الدفع والتأكيد -->
+  <!-- نظام الدفع -->
   <section>
     <div class="payment-box">
       <h3>شروط ونظام الدفع 💳</h3>
       <p>
         • يُدفع <strong>50% عربون</strong> لتبدأ كتابة السيناريو وتصميم الشخصيات.<br>
-        • يتم إرسال معيانة الفيديوهات والتعديلات المتاحة مجاناً قبل الاعتماد.<br>
+        • يتم إرسال معاينة الفيديوهات والتعديلات المتاحة مجاناً قبل الاعتماد.<br>
         • يُدفع باقي المبلغ (50%) عند استلام الفيديو النهائي بجودته الكاملة.
       </p>
     </div>
