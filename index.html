@@ -1,39 +1,83 @@
-
 <!DOCTYPE html>
-
- 
-
-<html>
-
- 
-
+<html lang="ar" dir="rtl">
 <head>
-
-<title>موقعي</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قصة الكرتون | toon-tale</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
+      color: #ffffff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px;
+    }
+    header {
+      width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 25px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);
+      border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 40px;
+    }
+    .logo { font-size: 24px; font-weight: bold; color: #a855f7; }
+    nav a { color: #cbd5e1; text-decoration: none; margin-right: 20px; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #a855f7; }
+    .hero { text-align: center; max-width: 800px; margin: 30px auto; }
+    .hero h1 { font-size: 42px; margin-bottom: 20px; line-height: 1.3; }
+    .hero p { font-size: 18px; color: #94a3b8; line-height: 1.8; margin-bottom: 35px; }
+    .btn-primary {
+      display: inline-block; padding: 16px 36px; font-size: 18px; font-weight: bold; color: #ffffff;
+      background: linear-gradient(90deg, #6366f1, #a855f7); border-radius: 50px; text-decoration: none;
+      box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4); transition: all 0.3s ease;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(168, 85, 247, 0.6); }
+    .features { display: flex; gap: 20px; margin-top: 50px; flex-wrap: wrap; justify-content: center; }
+    .card {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 25px; border-radius: 16px; width: 250px; text-align: right;
+    }
+    .card h3 { color: #38bdf8; margin-bottom: 10px; font-size: 18px; }
+    .card p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+    footer { margin-top: auto; padding: 30px 0 10px; text-align: center; }
+    .social-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: bold; }
+  </style>
 </head>
-
- 
-
 <body>
 
- 
-<h1>قصة الكرتون</h1>
-<p>نصنع فيديوهات أنيميشن مخصصة تحكي قصتكم بطريقة إبداعية، من أول لقاء وحتى
-أجمل المناسبات مثل الخطوبة والزفاف وأعياد الميلاد، باستخدام شخصيات كرتونية
-مصممة خصيصًا لتشبهكم وتروي ذكرياتكم بأسلوب ممتع ومميز.</p>
+  <header>
+    <div class="logo">قصة الكرتون</div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="packages.html">الباقات والأسعار</a>
+    </nav>
+  </header>
 
- <h3>كل قصة لها ذكرى... ونحن نحولها إلى فيلم أنيميشن مميز.</h3>
+  <section class="hero">
+    <h1>قصة الكرتون</h1>
+    <p>أعياد الميلاد، المناسبات، والذكريات السعيدة.. باستخدام شخصيات كرتونية مصممة خصيصًا لتشبهكم، نروي ذكرياتكم بأسلوب ممتع ومميز. كل قصة لها ذكرى... ونحن نحولها إلى فيلم أنيميشن ساحر!</p>
+    
+    <a href="packages.html" class="btn-primary">عرض الباقات والأسعار</a>
 
+    <div class="features">
+      <div class="card">
+        <h3>شخصيات مخصصة</h3>
+        <p>تصميم شخصيات كرتونية فريدة تعبر عنك وعن أحبابك.</p>
+      </div>
+      <div class="card">
+        <h3>سيناريو ممتع</h3>
+        <p>نصوغ قصتكم الحقيقية في قالب درامي أو كوميدي مشوق.</p>
+      </div>
+      <div class="card">
+        <h3>تحريك احترافي</h3>
+        <p>فيديو أنيميشن جاهز للعرض والمشاركة في مناسبتكم.</p>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <p style="color: #64748b; margin-bottom: 10px;">تواصلوا معنا عبر منصات التواصل:</p>
+    <div class="social-links">
+      <a href="https://wa.me/201114572182" target="_blank">واتساب</a> |
+      <a href="https://www.facebook.com/profile.php?id=61553636090266" target="_blank">فيسبوك</a> |
+      <a href="https://tiktok.com/@tooo17n" target="_blank">تيك توك</a>
+    </div>
+  </footer>
 
-</p>packages.htmlالباقات والأسعار</a>
-
-
-  
-<br><br>  
-
-  
 </body>
-
-</html
+</html>
