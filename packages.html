@@ -3,56 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOON TALG | قصة الكرتون</title>
+  <title>الباقات والأسعار | TOON TALG</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
     body {
       background: #0f172a;
-      color: #f8fafc; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px;
+      color: #f8fafc; min-height: 100vh; padding: 20px;
+      display: flex; flex-direction: column; align-items: center;
     }
     header {
-      width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center;
-      padding: 15px 25px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px);
+      width: 100%; max-width: 1100px; display: flex; justify-content: space-between;
+      align-items: center; padding: 15px 25px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px);
       border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px;
     }
     .logo-text { font-size: 26px; font-weight: 900; color: #ff8c00; letter-spacing: 1px; }
     .logo-text span { color: #38bdf8; }
     nav a { color: #cbd5e1; text-decoration: none; margin-right: 20px; font-weight: bold; transition: 0.3s; }
     nav a:hover { color: #ff8c00; }
-
-    .hero { text-align: center; max-width: 800px; margin: 20px auto; }
-    .hero h1 { font-size: 40px; color: #ffffff; margin-bottom: 15px; }
-    .hero p { font-size: 18px; color: #94a3b8; line-height: 1.8; margin-bottom: 25px; }
     
-    .btn-primary {
-      display: inline-block; padding: 15px 35px; font-size: 18px; font-weight: bold; color: #ffffff;
-      background: linear-gradient(90deg, #ff8c00, #f59e0b); border-radius: 50px; text-decoration: none;
-      box-shadow: 0 8px 25px rgba(255, 140, 0, 0.35); transition: all 0.3s ease;
+    h1 { margin-bottom: 10px; font-size: 36px; text-align: center; color: #ffffff; }
+    p.subtitle { color: #94a3b8; margin-bottom: 40px; text-align: center; font-size: 16px; }
+
+    .pricing-container {
+      display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; max-width: 1200px;
     }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255, 140, 0, 0.5); }
-
-    section { width: 100%; max-width: 1100px; margin: 40px 0; }
-    .section-title { text-align: center; font-size: 28px; color: #38bdf8; margin-bottom: 25px; }
-
-    /* خطوات العمل */
-    .steps-container { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-    .step-card {
-      background: #1e293b; padding: 20px; border-radius: 16px; width: 240px; text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid #ff8c00;
+    .price-card {
+      background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px; padding: 25px; width: 320px; text-align: center; transition: 0.3s;
+      display: flex; flex-direction: column; justify-content: space-between;
     }
-    .step-card h4 { color: #ff8c00; margin-bottom: 10px; font-size: 18px; }
-    .step-card p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
-
-    /* سياسة الدفع */
-    .payment-box {
-      background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); padding: 25px; border-radius: 20px;
-      text-align: center; max-width: 800px; margin: 0 auto;
+    .price-card:hover { transform: translateY(-5px); border-color: #ff8c00; box-shadow: 0 8px 25px rgba(255, 140, 0, 0.25); }
+    
+    .price-card.featured {
+      border: 2px solid #ff8c00; background: rgba(30, 41, 59, 0.9);
+      box-shadow: 0 8px 30px rgba(255, 140, 0, 0.2);
     }
-    .payment-box h3 { color: #38bdf8; margin-bottom: 10px; }
-    .payment-box p { color: #cbd5e1; font-size: 15px; line-height: 1.8; }
+    .badge {
+      background: linear-gradient(90deg, #ff8c00, #f59e0b); color: #fff;
+      padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: bold;
+      display: inline-block; margin-bottom: 12px;
+    }
+    
+    .price { font-size: 32px; font-weight: 900; color: #38bdf8; margin: 15px 0; }
+    .features-list { list-style: none; text-align: right; margin-bottom: 25px; color: #cbd5e1; line-height: 2; font-size: 14px; }
+    .features-list li::before { content: "✓ "; color: #ff8c00; font-weight: bold; }
 
-    footer { margin-top: auto; padding: 30px 0 10px; text-align: center; }
-    .social-links a { color: #38bdf8; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    .btn-order {
+      display: block; width: 100%; padding: 12px; border-radius: 25px;
+      background: linear-gradient(90deg, #25D366, #128C7E); color: white;
+      text-decoration: none; font-weight: bold; transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+    .btn-order:hover { opacity: 0.95; transform: scale(1.02); }
   </style>
 </head>
 <body>
@@ -61,59 +63,102 @@
     <div class="logo-text">TOON <span>TALG</span></div>
     <nav>
       <a href="index.html">الرئيسية</a>
-      <a href="packages.html">الباقات والأسعار</a>
+      <a href="packages.html" style="color: #ff8c00;">الباقات والأسعار</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>نحول أجمل ذكرياتكم إلى فيلم كرتون ساحر!</h1>
-    <p>أعياد الميلاد، قصة الخطوبة والزواج، والمناسبات السعيدة.. نكتب قصتكم ونرسم شخصياتكم ونحركها بأسلوب ممتع ومميز يبقى ذكرى للأبد.</p>
-    <a href="packages.html" class="btn-primary">استعرض الباقات والأسعار</a>
-  </section>
+  <h1>باقات أفلام الكرتون والأنيميشن</h1>
+  <p class="subtitle">اختر المدة المناسبة لقصتك وابدأ معنا فوراً عبر الواتساب</p>
 
-  <!-- المطلوب منكم -->
-  <section>
-    <h2 class="section-title">إزاي بنعمل فيديو قصتكم؟ (المطلوب منكم)</h2>
-    <div class="steps-container">
-      <div class="step-card">
-        <h4>1. تفاصيل القصة</h4>
-        <p>احكوا لنا أهم المواقف، التواريخ المميزة، ومكان أول لقاء بينكم.</p>
-      </div>
-      <div class="step-card">
-        <h4>2. صور الشخصيات</h4>
-        <p>إرسال صور واضحة للشخصيات لنصمم كرتون يشبهكم تماماً.</p>
-      </div>
-      <div class="step-card">
-        <h4>3. مراجعة السيناريو</h4>
-        <p>نكتب السكريبت ونعرضه عليكم للتعديل والاعتماد قبل التحريك.</p>
-      </div>
-      <div class="step-card">
-        <h4>4. استلام الفيديو</h4>
-        <p>تسليم الفيلم جاهزاً بجودة عالية للعرض في المناسبة.</p>
-      </div>
-    </div>
-  </section>
+  <div class="pricing-container">
 
-  <!-- نظام الدفع -->
-  <section>
-    <div class="payment-box">
-      <h3>شروط ونظام الدفع 💳</h3>
-      <p>
-        • يُدفع <strong>50% عربون</strong> لتبدأ كتابة السيناريو وتصميم الشخصيات.<br>
-        • يتم إرسال معاينة الفيديوهات والتعديلات المتاحة مجاناً قبل الاعتماد.<br>
-        • يُدفع باقي المبلغ (50%) عند استلام الفيديو النهائي بجودته الكاملة.
-      </p>
+    <div class="price-card">
+      <div>
+        <h3>باقة الدقيقة الواحدة</h3>
+        <div class="price">1,000 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 1 دقيقة</li>
+          <li>تصميم شخصيات حسب الطلب</li>
+          <li>صياغة سيناريو احترافي</li>
+          <li>تسليم بجودة عالية HD</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الدقيقة%20الواحدة" class="btn-order" target="_blank">طلب عبر الواتساب</a>
     </div>
-  </section>
 
-  <footer>
-    <p style="color: #64748b; margin-bottom: 10px;">تواصلوا معنا عبر منصات التواصل الاجتماعي:</p>
-    <div class="social-links">
-      <a href="https://wa.me/201114572182" target="_blank">واتساب</a> |
-      <a href="https://www.facebook.com/profile.php?id=61553636090266" target="_blank">فيسبوك</a> |
-      <a href="https://tiktok.com/@tooo17n" target="_blank">تيك توك</a>
+    <div class="price-card">
+      <div>
+        <h3>باقة الدقيقتين</h3>
+        <div class="price">2,000 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 2 دقيقة</li>
+          <li>تصميم شخصيتين أو أكثر</li>
+          <li>سيناريو مميز للأحداث</li>
+          <li>إضافة مؤثرات صوتية وموسيقى</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الدقيقتين" class="btn-order" target="_blank">طلب عبر الواتساب</a>
     </div>
-  </footer>
+
+    <div class="price-card featured">
+      <div>
+        <span class="badge">الأكثر طلباً ⭐</span>
+        <h3>باقة الـ 3 دقائق</h3>
+        <div class="price">2,700 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 3 دقائق</li>
+          <li>توفير 300 جنيه</li>
+          <li>سرد قصصي كامل ومتكامل</li>
+          <li>تعديلات مجانية للسيناريو</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ3%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <div class="price-card">
+      <div>
+        <h3>باقة الـ 4 دقائق</h3>
+        <div class="price">3,600 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 4 دقائق</li>
+          <li>توفير 400 جنيه</li>
+          <li>مشاهد متنوعة وشخصيات متعددة</li>
+          <li>جودة احترافية للعرض في المناسبات</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ4%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <div class="price-card">
+      <div>
+        <h3>باقة الـ 5 دقائق</h3>
+        <div class="price">4,200 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 5 دقائق</li>
+          <li>توفير 800 جنيه</li>
+          <li>فيلم أنيميشن قصير ومتكامل</li>
+          <li>أولوية وسرعة في التنفيذ</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ5%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+    <div class="price-card featured">
+      <div>
+        <span class="badge">أعلى توفير 🔥</span>
+        <h3>باقة الـ 6 دقائق</h3>
+        <div class="price">4,500 ج.م</div>
+        <ul class="features-list">
+          <li>مدة الفيديو: 6 دقائق</li>
+          <li>توفير 1,500 جنيه كاملة!</li>
+          <li>فيلم كامل يصلح للمناسبات الكبرى</li>
+          <li>دعم وفحص دقيق حتى الرضا التام</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/201114572182?text=أهلاً،%20أريد%20طلب%20باقة%20الـ6%20دقائق" class="btn-order" target="_blank">طلب عبر الواتساب</a>
+    </div>
+
+  </div>
 
 </body>
 </html>
