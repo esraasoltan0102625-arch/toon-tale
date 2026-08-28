@@ -8,38 +8,93 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
     body {
       background: #0f172a;
-      color: #f8fafc; min-height: 100vh; padding: 20px;
-      display: flex; flex-direction: column; align-items: center;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
+    
     header {
-      width: 100%; max-width: 1100px; display: flex; justify-content: space-between;
-      align-items: center; padding: 15px 25px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px);
-      border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 30px;
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 40px;
     }
     .logo-text { font-size: 26px; font-weight: 900; color: #ff8c00; letter-spacing: 1px; }
     .logo-text span { color: #38bdf8; }
-    nav a { color: #cbd5e1; text-decoration: none; margin-right: 20px; font-weight: bold; transition: 0.3s; }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
     nav a:hover, nav a.active { color: #ff8c00; }
 
-    h1 { margin-bottom: 10px; font-size: 36px; text-align: center; color: #ffffff; }
-    p.subtitle { color: #94a3b8; margin-bottom: 40px; text-align: center; font-size: 16px; }
+    .page-title { text-align: center; margin-bottom: 40px; }
+    .page-title h1 { font-size: 36px; color: #ffffff; margin-bottom: 10px; }
+    .page-title h1 span { color: #ff8c00; }
+    .subtitle { color: #94a3b8; font-size: 16px; }
 
+    /* شبكة معرض الأعمال */
     .gallery-grid {
-      display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; max-width: 1100px; width: 100%;
+      display: flex;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1100px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
     }
+
     .video-card {
-      background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px; overflow: hidden; width: 340px;
-      display: flex; flex-direction: column; transition: 0.3s;
+      background: #1e293b;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      width: 320px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
-    .video-card:hover { transform: translateY(-5px); border-color: #ff8c00; box-shadow: 0 8px 25px rgba(255, 140, 0, 0.25); }
-    
-    .video-card video {
-      width: 100%; height: 220px; object-fit: cover; background: #000;
+    .video-card:hover { transform: translateY(-5px); }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 177.78%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
     }
-    .video-info { padding: 15px 20px; text-align: center; }
-    .video-info h3 { color: #f8fafc; font-size: 18px; margin-bottom: 8px; }
-    .video-info p { color: #94a3b8; font-size: 14px; }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info { padding: 15px; text-align: center; }
+    .video-info h3 { color: #ff8c00; font-size: 18px; margin-bottom: 5px; }
+    .video-info p { color: #94a3b8; font-size: 13px; }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      padding: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -53,25 +108,40 @@
     </nav>
   </header>
 
-  <h1>معرض أعمالنا</h1>
-  <p class="subtitle">نماذج متجددة من قصص الأنيميشن والكرتون التي قمنا بتنفيذها لعملائنا</p>
+  <div class="page-title">
+    <h1>معرض <span>أعمالنا</span> 🎬</h1>
+    <p class="subtitle">نماذج متجددة من قصص الأنيميشن والكرتون التي قمنا بتنفيذها لعملائنا</p>
+  </div>
 
   <div class="gallery-grid">
 
     <!-- نموذج فيديو 1 -->
     <div class="video-card">
-      <video controls preload="metadata">
-        <source src="docs/work1.mp4" type="video/mp4">
-        <source src="work1.mp4" type="video/mp4">
-        متصفحك لا يدعم تشغيل الفيديو.
-      </video>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/k4CFLTnwO1M" title="نموذج أنيميشن 1" allowfullscreen></iframe>
+      </div>
       <div class="video-info">
-        <h3>قصة أنيميشن مميزة</h3>
-        <p>نموذج عمل كرتوني متكامل من تنفيذ TOON TALG</p>
+        <h3>قصة أنيميشن مميزة #1</h3>
+        <p>TOON TALG نموذج عمل كرتوني متكامل من تنفيذ</p>
+      </div>
+    </div>
+
+    <!-- نموذج فيديو 2 (الجديد) -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/V3YYvnSKavA" title="نموذج أنيميشن 2" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>قصة أنيميشن مميزة #2</h3>
+        <p>TOON TALG نموذج إعلان وتحريك كرتوني من تنفيذ</p>
       </div>
     </div>
 
   </div>
+
+  <footer>
+    جميع الحقوق محفوظة © TOON TALG
+  </footer>
 
 </body>
 </html>
