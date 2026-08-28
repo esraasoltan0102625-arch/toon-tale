@@ -93,12 +93,6 @@
     }
     .featured-video h2 { color: #ff8c00; margin-bottom: 10px; font-size: 24px; }
     .featured-video p { color: #94a3b8; margin-bottom: 20px; font-size: 15px; }
-    .featured-video video {
-      width: 100%;
-      border-radius: 12px;
-      border: 2px solid #ff8c00;
-      box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
-    }
 
     /* قسم كيف نعمل */
     .steps-section {
@@ -149,22 +143,20 @@
   <!-- القسم الترحيبي -->
   <div class="hero">
     <h1>حولي فكرتك أو قصتك إلى <span>فيديو أنيميشن</span> جذاب!</h1>
-    <p>في <b>TOON TALG</b> نساعدك على تصيميم فيديوهات كرتونية احترافية للمناسبات، المشاريع، والإعلانات بأسلوب ممتع وسلس يبقى ذكرة للأبد.</p>
+    <p>في <b>TOON TALG</b> نساعدك على تصميم فيديوهات كرتونية احترافية للمناسبات، المشاريع، والإعلانات بأسلوب ممتع وسلس يبقى ذكرى للأبد.</p>
     <div class="btn-container">
       <a href="packages.html" class="btn btn-primary">استعرض الباقات والأسعار</a>
       <a href="gallery.html" class="btn btn-secondary">مشاهدة معرض الأعمال 🎬</a>
     </div>
   </div>
 
-  <!-- عرض فيديو مميز في الصفحة الرئيسية -->
+  <!-- عرض فيديو مميز من يوتيوب -->
   <div class="featured-video">
     <h2>شاهد نموذجاً من أعمالنا 🎬</h2>
     <p>جودة الرسوم والتحريك التي نقدمها لعملائنا في TOON TALG</p>
-    <video controls preload="metadata">
-      <source src="docs/work1.mp4" type="video/mp4">
-      <source src="work1.mp4" type="video/mp4">
-      متصفحك لا يدعم تشغيل الفيديو.
-    </video>
+    <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; max-width: 360px; margin: 0 auto; border-radius: 15px; border: 2px solid #ff8c00; box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);">
+      <iframe src="https://www.youtube.com/embed/k4CFLTnwO1M" title="TOON TALG Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
   </div>
 
   <!-- خطوات العمل -->
